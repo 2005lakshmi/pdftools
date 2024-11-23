@@ -6,3 +6,4 @@ Pillow
 pymupdf
 pyperclip
 aspose-pdf
+faker
