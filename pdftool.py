@@ -101,7 +101,7 @@ def pdf_to_images():
 
         imagespath = []
         images = []
-
+        pdf = fitz.open(pdf_path)
         if pdf_path:
             
             choice = st.radio("Select Option",["All Pages","Specific Pages","None"],index = 2)
