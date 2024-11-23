@@ -378,6 +378,7 @@ def lock_pdf():
                             writer.write(f)
                             
                         st.success("Locked pdf")
+                        st.write(password)
                         st.write("First Copy then Download")
                         if st.button("Copy Password"):
                         # Copy the password to clipboard using pyperclip
