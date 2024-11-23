@@ -433,7 +433,7 @@ def extract_img_from_pdf() :
                             
                             img = pdf.extract_image(xref)
                             img_bytes = img["image"]
-                            
+                            import io
                             # Create a PIL Image from the byte data
                             img_pil = Image.open(io.BytesIO(img_bytes))
                             
