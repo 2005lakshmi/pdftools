@@ -341,10 +341,10 @@ def lock_pdf():
                     with open(output_pdf,"wb") as f:
                         writer.write(f)
                     st.success("Locked pdf")
-                    if st.button("Copy Password"):
+                    if st.button("Show Password"):
                     # Copy the password to clipboard using pyperclip
-                        pyperclip.copy(password)
-                        st.success("Password copied to clipboard!")
+                        st.write(password)
+                        
                 
 
                     st.write(f"pdf saved at {os.path.abspath(output_pdf)}")
@@ -378,12 +378,12 @@ def lock_pdf():
                             writer.write(f)
                             
                         st.success("Locked pdf")
-                        st.write(password)
+                        
                         st.write("First Copy then Download")
                         if st.button("Show Password"):
                         # Copy the password to clipboard using pyperclip
                             st.write(password)
-                            st.success("Password copied to clipboard!")
+                            
                     
 
                         st.write(f"pdf saved at {os.path.abspath(output_pdf)}")
