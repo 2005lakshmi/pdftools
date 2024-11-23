@@ -324,6 +324,7 @@ def extract_pg_as_pdf():
 
 def lock_pdf():
     try:
+        from faker import Faker
         st.subheader("L:red[o]c:red[k] :blue[Pdf]")
         inpdf = st.file_uploader("Choose file",type=["pdf"])
         if inpdf:
@@ -402,7 +403,7 @@ def lock_pdf():
 
 def extract_img_from_pdf() :
     try:
-        from faker import Faker
+        
 
         st.subheader(":green[Extract] :blue[Image] in :red[Pdf]")
         
