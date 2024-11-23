@@ -402,6 +402,7 @@ def lock_pdf():
 
 def extract_img_from_pdf() :
     try:
+        from faker import Faker
 
         st.subheader(":green[Extract] :blue[Image] in :red[Pdf]")
         
