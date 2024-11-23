@@ -140,7 +140,7 @@ def pdf_to_images():
 
                 if pages:
 
-                    pdf = fitz.open(pdf_path)
+                    
                     i = 0
                     for pg in pages:
                         page = pdf[pg]
