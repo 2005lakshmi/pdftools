@@ -398,17 +398,28 @@ def lock_pdf():
 #lock_pdf()
 
 def extract_img_from_pdf() :
-    try:
+    import fitz  # PyMuPDF
+    import os
+    from PIL import Image
+    import io
+    from PyPDF2 import PdfReader
+    import streamlit as st
+
+    #try:
         
 
-        st.subheader(":green[Extract] :blue[Image] in :red[Pdf]")
-        
-        inpdf = st.file_uploader("Choose file",type=["pdf"])
+    st.subheader(":green[Extract] :blue[Image] in :red[Pdf]")
+    
+    inpdf = st.file_uploader("Choose file",type=["pdf"])
+    if inpdf:
+        pdf = fitz.open(stream=inpdf.read(), filetype="pdf")
         imgcount = 0
-        pdf = fitz.open(inpdf)
+        
+        
         choice = st.radio("Choose Operation",["None","All pages","Specific pages"],label_visibility="collapsed")
         if choice == "Specific pages":
             pageslist = pagenuminput(inpdf)
+            
             if pageslist:
                 ob = []
                 reader = PdfReader(inpdf)
@@ -491,9 +502,7 @@ def extract_img_from_pdf() :
 
         if choice == "None":
             st.write("select option")
-    except Exception as e:
-        st.error(f"An error occured: {e}")
-
+        
 #extract_img_from_pdf()    
 
     
