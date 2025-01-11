@@ -11,6 +11,9 @@ import random
 import datetime as dt
 import time
 
+st.cache_data.clear()
+
+
 def mergepdf():
     try:
         st.subheader(":blue[Merge] Multiple :orange[Pdf's]")
