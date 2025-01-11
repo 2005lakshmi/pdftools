@@ -271,7 +271,7 @@ def extract_pg_as_pdf():
                         nmp.append(i)
                         writer2.add_page(reader.pages[i])
                         
-                output_pdf = f"{pageslist}extract.pdf"
+                output_pdf = "MentionedPagesExtract.pdf"
                 output_pdf2 = f"nonMentionedpages.pdf"
                 
                 with open(output_pdf,"wb") as output_fle:
